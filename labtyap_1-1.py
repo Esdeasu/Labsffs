@@ -1,10 +1,12 @@
-a = int(input("введите а - ")) 
-b = int(input("введите b - ")) 
-c = int(input("введите c - ")) 
-d = int(input("введите d - ")) 
-k = int(input("введите k - ")) 
-if b==0 or a==0: print("A=0 или B=0, деление на 0") 
-else: 
-    vir = pow((pow(a,2)-pow(b,3)-pow(c,3)*pow(a,2)) * (b-c+c*(k-(d/pow(b,3)))) - (k/b-k/a)*c,2) - 20000 
-    if vir<0: vir=-vir 
-    print(vir)
+a = float(input("input a - "))
+b = float(input("input b - "))
+c = float(input("input c - "))
+d = float(input("input d - "))
+k = float(input("input k - "))
+if b == 0 or a == 0:
+print("A=0 or B=0. Error")
+else:
+vir = ((a**2-b**3 - c**3*a**2)*(b-c+c*(k-d/b**3)) - (k/b -k/a)*c)**2 - 20000
+if vir < 0:
+vir = -vir
+print(vir)
