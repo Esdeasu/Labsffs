@@ -1,9 +1,8 @@
 k = int(input("Введите количество элементов списка(N > 10) - "))
 a = []
-for i in range(0, k):
+for i in range(0, k + 1):
     a.append(input('Введите ' + str(i + 1) + ' элемент: '))
 i = 0
-kk = k
 while i < len(a):
     if int(a[i]) % 2 == 0:
         a.remove(a[i])
