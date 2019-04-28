@@ -1,12 +1,12 @@
 a = input("Введите строку - ")
-a = a.lower()
+a = a + ' '
 i = 0
 o = ''
 while i < len(a):
     k = 0
-    if a[i] == 'л' and a[i+1] == 'и':
+    if a[i] == 'Л' and a[i+1] == 'и':
         for b in a[i:]:
-            if b != ' ' and b != ',' and b != '.':
+            if b != ' ' and b != ',' and b != '.' and b != ';' and b != ':':
                 k = k + 1
             else:
                 break
