@@ -14,10 +14,7 @@ s.append(c)
 s.append(d)
 s.append(k)
 s = str(s)
-if b == 0 or a == 0:
-    print("A=0 or B=0. Error")
-else:
-    bred.send(s.encode())
+bred.send(s.encode())
 
 res = bred.recv(34000)
 res = res.decode()
