@@ -16,11 +16,15 @@ while True:
     c = float(data[2])
     d = float(data[3])
     k = float(data[4])
-
-    res = ((a**2-b**3 - c**3*a**2)*(b-c+c*(k-d/b**3)) - (k/b - k/a)*c)**2 - 2000
-    res = 'Ответ = ' + str(res)
+    
+    if a == 0 or b == 0:
+        o = 'Ошибка: деление на ноль'
+        serv.send(o.encode())
+    else:
+        res = ((a**2-b**3 - c**3*a**2)*(b-c+c*(k-d/b**3)) - (k/b - k/a)*c)**2 - 2000
+        res = 'Ответ = ' + str(res)
+        serv.send(res.encode())
     if not data:
         w = 'wtf men'
         serv.send(w.encode())
     break
-serv.send(res.encode())
