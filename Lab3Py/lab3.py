@@ -34,7 +34,6 @@ def task3(s1, s2):
         s1[f[i] - 1][3] = str(int(s1[f[i] - 1][3]) - n)
         if int(s1[f[i] - 1][3]) < 0:
             s1[f[i] - 1][3] = '0'
-    s1 = s1.remove(s1[0])
     s1.sort(key=lambda s1: int(s1[2]))  # сортируем обратно, делаем конечный список
     s2 = [s2[0]]
     s2.extend(s1)
